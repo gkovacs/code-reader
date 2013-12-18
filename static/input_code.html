@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<script src="jquery-1.9.1.js"></script>
+<script>
+function submitCode() {
+	window.location.href = '/index_code.html?' + $.param({lang: 'javascript', text: $('#codeinput').val()})
+}
+</script>
+<style>
+textarea#codeinput {
+	height: 300px;
+	width: 100%;
+}
+</style>
+<textarea id="codeinput"></textarea>
+<p>
+	Enter your javascript code in the textbox above, then click the submit button.
+</p>
+<button onclick="submitCode()">Submit code to explainer system</button>
+</html>

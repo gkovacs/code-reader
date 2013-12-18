@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.10.3.custom.min.css">
+<script src="jquery-1.9.1.js"></script>
+<script src="jquery-ui-1.10.3.custom.min.js"></script>
+<script src="acorn.js"></script>
+<script src="walk.js"></script>
+<script src="async.js"></script>
+<!--<script src="prelude-browser-min.js"></script>-->
+<script src="underscore.js"></script>
+<script src="index_code.js"></script>
+
+<style>
+span.code {
+	white-space: pre-wrap;
+	font-family: monospace;
+}
+
+#leftFrame {
+	position: absolute;
+	background-color: white;
+	width: 50%;
+	height: 100%;
+	left: 0%;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+#rightFrame {
+	position: absolute;
+	background-color: #DDEEFF;
+	width: 50%;
+	height: 100%;
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+.highlighted {
+	background-color: yellow;
+}
+
+.bluehighlight {
+	background-color: #DDEEFF;
+}
+</style>
+
+<div id="leftFrame"><div id="codeDisplay"></div></div>
+<div id="rightFrame"><div id="explanationDisplay"></div></div>
+</html>
