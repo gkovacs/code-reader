@@ -14,7 +14,7 @@ rootURL = 'https://api.github.com'
 
 fs = require 'fs'
 
-if process.env.GITHUB_CLIENT_ID? and process.end.GITHUB_CLIENT_SECRET?
+if process.env.GITHUB_CLIENT_ID? and process.env.GITHUB_CLIENT_SECRET?
   client_id = process.env.GITHUB_CLIENT_ID
   client_secret = process.env.GITHUB_CLIENT_SECRET
 else

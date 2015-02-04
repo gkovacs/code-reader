@@ -10,7 +10,7 @@
   codesearch_db = nstore['new']('github_codesearch.nstore');
   rootURL = 'https://api.github.com';
   fs = require('fs');
-  if (process.env.GITHUB_CLIENT_ID != null && process.end.GITHUB_CLIENT_SECRET != null) {
+  if (process.env.GITHUB_CLIENT_ID != null && process.env.GITHUB_CLIENT_SECRET != null) {
     client_id = process.env.GITHUB_CLIENT_ID;
     client_secret = process.env.GITHUB_CLIENT_SECRET;
   } else {
