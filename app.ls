@@ -13,8 +13,9 @@ app.configure ->
   app.use(express.static(__dirname + '/static'))
 
 http = require 'http'
+app.set 'port', (process.env.PORT || 5000)
 httpserver = http.createServer(app)
-httpserver.listen(3456)
+httpserver.listen(app.get('port'), '0.0.0.0')
 
 app.get '/searchStackOverflow', (req, res) ->
   params = {[k,v] for k,v of req.query}
