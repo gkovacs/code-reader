@@ -14,7 +14,11 @@ rootURL = 'https://api.github.com'
 
 fs = require 'fs'
 
-{client_id,client_secret} = JSON.parse fs.readFileSync('github_client_secret.json', 'utf-8')
+if process.env.GITHUB_CLIENT_ID? and process.end.GITHUB_CLIENT_SECRET?
+  client_id = process.env.GITHUB_CLIENT_ID
+  client_secret = process.env.GITHUB_CLIENT_SECRET
+else
+  {client_id,client_secret} = JSON.parse fs.readFileSync('github_client_secret.json', 'utf-8')
 
 wrapGH = (path, defaults, postprocess) ->
   defaults ?= {}
